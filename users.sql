@@ -1,3 +1,5 @@
+
+
 /*Script para crear la BD */
 
 CREATE TABLE users (
