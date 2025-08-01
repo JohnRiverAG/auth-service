@@ -20,7 +20,7 @@
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
-    //COmunicamos el resultado de la consulta
+    //Comunicamos el resultado de la consulta
     if ($user && password_verify($password, $user['password'])) {
         echo json_encode(['message' => 'Autenticación satisfactoria']);
     } else {

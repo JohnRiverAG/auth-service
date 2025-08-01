@@ -5,7 +5,7 @@
     $host = 'localhost';
     $db   = 'auth_db';
     $user = 'root';
-    $pass = 'main';
+    $pass = 'admin';
     $charset = 'utf8mb4';   //Para pasar el valor de la variable a una cadena de este tipo
 
     //Preparamos la conexión usando php's PDO

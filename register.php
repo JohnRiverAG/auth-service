@@ -15,7 +15,7 @@
         exit;
     }
 
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);   //Enmascarar password
 
     //Almacenamos los datos en la BD
     try {
@@ -24,6 +24,6 @@
         echo json_encode(['message' => 'Registro exitoso']);
     } catch (PDOException $e) {     //Si el usuario ya existe
         http_response_code(409);
-        echo json_encode(['error' => 'El usuario ya existe']);
+        echo json_encode(['error' => 'El usuario ya existe', $e]);
     }
 ?>
